@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sales-archive-relay
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python relay.py
+    envVars:
+      - key: ARCHIVE_URL
+        sync: false
